@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nav_calender" type="id"></item>
+    <item name="nav_substances" type="id"></item>
+    <item name="nav_settings" type="id"></item>
+    <item name="toolbar" type="id" />
+    <item name="sugestion1ID" type="id" />
+    <item name="sugestion2ID" type="id" />
+    <item name="sugestion3ID" type="id" />
+</resources>
