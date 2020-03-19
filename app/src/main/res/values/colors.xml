@@ -7,5 +7,6 @@
     <color name="panel">#8C8888</color>
     <color name="FragmentBackground">#000000</color>
     <color name="TextColor">#FFFFFF</color>
+    <color name="TextColorFade">#66FFFFFF</color>
 
 </resources>
