@@ -1,15 +1,9 @@
 package com.example.medtracker
 
-import android.annotation.SuppressLint
-import android.content.Context
+
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.View
-import android.view.ViewGroup
-import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -17,6 +11,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.GsonBuilder
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_new_substance.*
 import kotlinx.android.synthetic.main.fragment_substance.*
@@ -25,12 +20,19 @@ import java.io.IOException
 
 class NewSubstance : FragmentActivity() {
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_substance)
 
         Substance_recyclerview.layoutManager = LinearLayoutManager(this)
-//        Substance_recyclerview.adapter = SubstanceAdapter()
+//        val toolbar = findViewById<android.widget.Toolbar>(R.id.new_substance_toolbar)
+//        setActionBar(toolbar)
+//        actionBar?.setDisplayHomeAsUpEnabled(true)
+            floating_action_button.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         fetchJson()
     }
@@ -58,7 +60,4 @@ class NewSubstance : FragmentActivity() {
     }
 }
 
-class HomeFeed (val videos: List<Video>)
-
-class Video (val id: Int, val name: String, val link: String, val imageUrl: String, val numberOfViews: Int)
 
