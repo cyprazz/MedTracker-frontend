@@ -26,12 +26,11 @@ class NewSubstance : FragmentActivity() {
         setContentView(R.layout.activity_new_substance)
 
         Substance_recyclerview.layoutManager = LinearLayoutManager(this)
-//        val toolbar = findViewById<android.widget.Toolbar>(R.id.new_substance_toolbar)
-//        setActionBar(toolbar)
-//        actionBar?.setDisplayHomeAsUpEnabled(true)
-            floating_action_button.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+
+        floating_action_button.setOnClickListener{
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+
         }
 
         fetchJson()
