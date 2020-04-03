@@ -34,15 +34,15 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/Preview_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="50dp"
                 android:layout_gravity="center_horizontal"
                 app:srcCompat="@drawable/ic_launcher_background" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/Substance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -56,7 +56,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/liters"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -68,7 +68,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/Percentage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -104,7 +104,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/Substance_name"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -172,7 +172,7 @@
                 android:textColorHint="@color/TextColor" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/AddSubstance"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"

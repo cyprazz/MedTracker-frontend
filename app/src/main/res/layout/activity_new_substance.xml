@@ -8,14 +8,6 @@
     tools:context=".NewSubstance"
     android:background="@color/FragmentBackground">
 
-<!--    <android.widget.Toolbar-->
-<!--        android:id="@+id/new_substance_toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="?attr/colorPrimary"-->
-<!--        android:elevation="4dp"-->
-<!--        android:minHeight="?attr/actionBarSize"-->
-<!--        />-->
 <RelativeLayout
     android:layout_height="match_parent"
     android:layout_width="match_parent"

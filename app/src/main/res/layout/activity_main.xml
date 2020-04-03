@@ -20,8 +20,6 @@
         app:itemIconTint="@drawable/nav_color_selector"
         app:itemTextColor="@drawable/nav_color_selector"/>
 
-
-
     <FrameLayout
     android:id="@id/container"
     android:layout_width="match_parent"

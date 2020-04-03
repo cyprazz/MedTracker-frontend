@@ -49,7 +49,6 @@ class NewSubstance : FragmentActivity() {
                 val homeFeed = gson.fromJson(body, HomeFeed::class.java)
                 runOnUiThread {
                     Substance_recyclerview.adapter = SubstanceAdapter(homeFeed)
-
                 }
             }
             override fun onFailure(call: Call, e: IOException) {
