@@ -27,8 +27,6 @@
         android:layout_marginStart="25dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="00dp"
-        android:
-            ="@id/Maandag"
         />
     <include
         layout="@layout/calander_week_panel"
