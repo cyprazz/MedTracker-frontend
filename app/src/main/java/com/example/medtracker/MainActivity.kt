@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         loadFragment(Substance())
+        toolbar.checkItem(R.id.nav_substances)
 
         toolbar.setOnNavigationItemSelectedListener {
             when(it.itemId){
@@ -42,5 +43,8 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+    private fun BottomNavigationView.checkItem(actionId: Int) {
+        menu.findItem(actionId)?.isChecked = true
     }
 }
