@@ -25,7 +25,7 @@ class CalenderAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getPageTitle(position: Int): CharSequence {
         return when (position) {
-            0 -> "Day"
+            0 -> "Dag"
             1 -> "Week"
             else -> {
                 return "Maand"
