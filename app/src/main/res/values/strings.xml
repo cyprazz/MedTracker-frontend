@@ -20,5 +20,10 @@
     <string name="blik_33cl">Blik - 33cl</string>
     <string name="alcohol_percentage_5">Alcohol percentage 5%</string>
     <string name="substance_name">Substance name</string>
+    <string name="empty">It is pretty empty in here...</string>
+    <string name="read_more">Read more</string>
+    <string name="title">Title</string>
+    <string name="message">This is an empty message</string>
+    <string name="read_less">Read less</string>
 
 </resources>
