@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.card_view.*
 import kotlinx.android.synthetic.main.fragment_substance.*
-import com.example.medtracker.Message_adapter as Message_adapter
+import com.example.medtracker.MessageAdapter as Message_adapter
 
 
 class Substance : Fragment() {

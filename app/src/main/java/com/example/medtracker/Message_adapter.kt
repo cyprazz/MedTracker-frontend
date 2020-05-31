@@ -7,10 +7,9 @@ import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.card_view.view.*
 
-class Message_adapter(val arrayList: ArrayList<Message>, val context: Substance) :
-    RecyclerView.Adapter<Message_adapter.ViewHolder>() {
-
-
+class MessageAdapter(val arrayList: ArrayList<Message>, val context: Substance) :
+    RecyclerView.Adapter<MessageAdapter.ViewHolder>() {
+    
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindItems(message: Message) {
