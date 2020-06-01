@@ -14,13 +14,13 @@ import kotlinx.android.synthetic.main.activity_new_substance.*
 class AddSubstance : AppCompatActivity(){
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            setContentView(R.layout.new_subs_add_substance)
+            setContentView(R.layout.add_substance)
 
-            // krijgt de title van de adapter met een intent call
-            val Name = intent.getStringExtra(CustomViewHolder.Substance_Name_key)
-            val Liter = intent.getStringExtra(CustomViewHolder.Substance_Liter_key)
-            val Percentage = intent.getStringExtra(CustomViewHolder.Substance_Percentage_key)
-            val Image = intent.getStringExtra(CustomViewHolder.Substance_Image_key)
+            // krijg de title van de adapter met een intent call TODO kan dit cleaner?
+            val Name = intent.getStringExtra(CustomViewHolder.SubstanceNameKey)
+            val Liter = intent.getStringExtra(CustomViewHolder.SubstanceLiterKey)
+            val Percentage = intent.getStringExtra(CustomViewHolder.SubstancePercentageKey)
+            val Image = intent.getStringExtra(CustomViewHolder.SubstanceImageKey)
 
             val name = findViewById<TextView>(R.id.Substance)
             name.text = Name
@@ -35,16 +35,16 @@ class AddSubstance : AppCompatActivity(){
             val button = findViewById<Button>(R.id.AddSubstance)
             button.setOnClickListener {
                 val builer = AlertDialog.Builder(this)
-                builer.setTitle("test")
-                builer.setMessage("nog meer test")
-                builer.setPositiveButton("oke",{ dialogInterface: DialogInterface, i: Int ->
+                builer.setTitle("test") // TODO hardcoded
+                builer.setMessage("nog meer test") // TODO hardcoded
+                builer.setPositiveButton("oke") { dialogInterface: DialogInterface, i: Int -> // TODO hardcoded
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
-                })
+                }
                 builer.show()
             }
 
-            floating_action_button.setOnClickListener{
+            floatingActionButton.setOnClickListener{
                 val intent = Intent(this, NewSubstance::class.java)
                 startActivity(intent)
             }

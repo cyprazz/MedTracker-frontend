@@ -7,7 +7,7 @@
     android:background="@color/PrimaryBackground">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
+        android:id="@+id/floatingActionButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="bottom|right"
@@ -17,7 +17,7 @@
         app:fabSize="mini"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+        app:srcCompat="@drawable/arrow_back" />
 
     <ScrollView
         android:layout_width="415dp"
@@ -34,7 +34,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/Preview_image"
+                android:id="@+id/PreviewImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="50dp"
@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
-                android:text="@string/blik_33cl"
+                android:text="@string/blikBier"
                 android:textColor="@color/TextColor"
                 android:layout_gravity="center_horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
-                android:text="@string/alcohol_percentage_5"
+                android:text="@string/alcoholPercentage"
                 android:textColor="@color/TextColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
-                android:background="@drawable/textview_border_rect"
+                android:background="@drawable/text_view_border"
                 android:drawablePadding="5dp"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -132,7 +132,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/textview_border_rect"
+                android:background="@drawable/text_view_border"
                 android:drawablePadding="5dp"
                 android:ems="10"
                 android:inputType="number"
@@ -156,7 +156,7 @@
                 android:id="@+id/textArea_information"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/textview_border_rect"
+                android:background="@drawable/text_view_border"
                 android:gravity="top|left"
                 android:inputType="textMultiLine"
                 android:lines="6"

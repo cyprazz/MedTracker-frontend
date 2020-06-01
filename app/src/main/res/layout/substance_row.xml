@@ -17,7 +17,7 @@
         android:layout_marginStart="130dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="4dp"
-        android:text="@string/substance_name"
+        android:text="@string/substanceName"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
         android:layout_marginTop="60dp"
-        android:text="@string/blik_33cl" />
+        android:text="@string/blikBier" />
 
     <TextView
         android:id="@+id/Percantage"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
         android:layout_marginTop="80dp"
-        android:text="@string/alcohol_percentage_5"
+        android:text="@string/alcoholPercentage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         tools:layout_editor_absoluteY="92dp" />
@@ -51,7 +51,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:contentDescription="@string/preview_image"
-        android:src="@drawable/ic_arrow_back_black_24dp" />
+        android:contentDescription="@string/previewImage"
+        android:src="@drawable/arrow_back" />
 
 </RelativeLayout>

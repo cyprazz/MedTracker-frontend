@@ -41,7 +41,7 @@
             android:textColor="@color/TextColor"/>
 
         <View
-            android:id="@+id/devider"
+            android:id="@+id/dividerTop"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="30dp"
@@ -51,7 +51,7 @@
             android:id="@+id/ButtonDay"
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:layout_alignTop="@id/devider"
+            android:layout_alignTop="@id/dividerTop"
             android:layout_marginStart="35dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_background_selected"
@@ -62,7 +62,7 @@
             android:id="@+id/ButtonWeek"
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:layout_alignTop="@id/devider"
+            android:layout_alignTop="@id/dividerTop"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_background"
@@ -78,10 +78,10 @@
             android:layout_marginEnd="35dp"
             android:text="Month"
             android:textColor="@color/TextColor"
-            android:layout_alignTop="@id/devider"
-            android:layout_alignEnd="@id/devider"/>
+            android:layout_alignTop="@id/dividerTop"
+            android:layout_alignEnd="@id/dividerTop"/>
         <View
-            android:id="@+id/devider2"
+            android:id="@+id/dividerBottom"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="50dp"
@@ -89,10 +89,10 @@
             android:background="@android:color/darker_gray" />
 
         <include
-            android:id="@+id/button_change"
-            layout="@layout/calander_day"
+            android:id="@+id/buttonChange"
+            layout="@layout/calender_day"
             android:layout_width="match_parent"
-            android:layout_alignTop="@id/devider2"
+            android:layout_alignTop="@id/dividerBottom"
             android:layout_margin="7dp"
             android:layout_height="wrap_content" />
 

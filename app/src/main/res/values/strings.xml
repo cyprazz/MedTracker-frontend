@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">MEDtracker</string>
+    <string name="appName">MEDtracker</string>
     <string name="btnNewSub">Button</string>
-    <string name="go_back">Terug</string>
-    <string name="add_a_new_substance">Add a New Substance</string>
-    <string name="Search_substance">Alcohol..</string>
-    <string name="Searchbar_text">Zoeken naar een substantie</string>
+    <string name="goBack">Terug</string>
+    <string name="addNewSubstance">Add a New Substance</string>
+    <string name="searchSubstance">Alcohol..</string>
+    <string name="searchbarText">Zoeken naar een substantie</string>
     <string name="suggestion1">Alcohol...</string>
     <string name="suggestion2">iets1</string>
     <string name="suggestion3">iets2</string>
@@ -16,14 +16,14 @@
     <string name="settings">Settings</string>
     <string name="toevoegen">Toevoegen</string>
     <string name="todo">TODO</string>
-    <string name="preview_image">preview_image</string>
-    <string name="blik_33cl">Blik - 33cl</string>
-    <string name="alcohol_percentage_5">Alcohol percentage 5%</string>
-    <string name="substance_name">Substance name</string>
+    <string name="previewImage">preview_image</string>
+    <string name="blikBier">Blik - 33cl</string>
+    <string name="alcoholPercentage">Alcohol percentage 5%</string>
+    <string name="substanceName">Substance name</string>
     <string name="empty">It is pretty empty in here...</string>
-    <string name="read_more">Read more</string>
+    <string name="readMore">Read more</string>
     <string name="title">Title</string>
     <string name="message">This is an empty message</string>
-    <string name="read_less">Read less</string>
+    <string name="readLess">Read less</string>
 
 </resources>

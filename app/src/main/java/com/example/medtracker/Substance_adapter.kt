@@ -39,10 +39,10 @@ class SubstanceAdapter(val homeFeed: HomeFeed): RecyclerView.Adapter<CustomViewH
 class CustomViewHolder(val view: View, var video: Video?= null): RecyclerView.ViewHolder(view){
     //hier stuur je de info via een intent mee naar de add_substance
     companion object{
-        const val Substance_Name_key = "Substance title"
-        const val Substance_Liter_key = "Substance liter"
-        const val Substance_Percentage_key = "Substance Percentage"
-        const val Substance_Image_key = "Substance Image"
+        const val SubstanceNameKey = "Substance title"
+        const val SubstanceLiterKey = "Substance liter"
+        const val SubstancePercentageKey = "Substance Percentage"
+        const val SubstanceImageKey = "Substance Image"
     }
 
     init {
@@ -50,10 +50,10 @@ class CustomViewHolder(val view: View, var video: Video?= null): RecyclerView.Vi
             val intent = Intent(view.context, AddSubstance::class.java)
 
             //meesturen van gegevens naar de addsubstance pagina
-            intent.putExtra(Substance_Name_key, video?.name)
-            intent.putExtra(Substance_Liter_key, video?.id.toString())
-            intent.putExtra(Substance_Percentage_key, video?.numberOfViews.toString())
-            intent.putExtra(Substance_Image_key, video?.imageUrl)
+            intent.putExtra(SubstanceNameKey, video?.name)
+            intent.putExtra(SubstanceLiterKey, video?.id.toString())
+            intent.putExtra(SubstancePercentageKey, video?.numberOfViews.toString())
+            intent.putExtra(SubstanceImageKey, video?.imageUrl)
 
             view.context.startActivity(intent)
         }

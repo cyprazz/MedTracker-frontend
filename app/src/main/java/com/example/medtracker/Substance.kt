@@ -8,18 +8,21 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_substance.*
-import com.example.medtracker.MessageAdapter as Message_adapter
+import com.example.medtracker.MessageAdapter as messageAdapter
 
 
 class Substance : Fragment() {
     private val arrayList = ArrayList<com.example.medtracker.Message>()
-//    val deleteButton = close_btn
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? =
         inflater.inflate(R.layout.fragment_substance, container, false)
 
 
@@ -30,16 +33,16 @@ class Substance : Fragment() {
         buildRecyclerView()
 
 
-        addnewSubstance2.setOnClickListener{
+        newSubstanceButton.setOnClickListener {
             val intent = Intent(activity, NewSubstance::class.java)
             startActivity(intent)
         } //This is the button to add a new substance
     }
 
-    fun buildRecyclerView(){
-        val messageAdapter = Message_adapter(arrayList, this)
-        card_recycler.layoutManager = LinearLayoutManager(context)
-        card_recycler.adapter = messageAdapter
+    fun buildRecyclerView() {
+        val messageAdapter = messageAdapter(arrayList, this)
+        cardRecycler.layoutManager = LinearLayoutManager(context)
+        cardRecycler.adapter = messageAdapter
     }//This builds the recycler
 
     fun View.toggleVisibility() {
@@ -50,15 +53,10 @@ class Substance : Fragment() {
         }
     } //This is an function to toggle visibility of the empty message
 
-    fun createList() {
+    fun createList() {//This creates a list
         arrayList.add(com.example.medtracker.Message("Nieuwtjes1", "Nog zeer weinig1."))
         arrayList.add(com.example.medtracker.Message("Nieuwtjes2", "Nog zeer weinig2."))
         arrayList.add(com.example.medtracker.Message("Nieuwtjes3", "Nog zeer weinig3."))
-        arrayList.add(com.example.medtracker.Message("Nieuwtjes4", "Nog zeer weinig4."))
-        arrayList.add(com.example.medtracker.Message("Nieuwtjes5", "Nog zeer weinig5."))
-        arrayList.add(com.example.medtracker.Message("Nieuwtjes6", "Nog zeer weinig6."))
-        arrayList.add(com.example.medtracker.Message("Nieuwtjes7", "Nog zeer weinig7."))
-        arrayList.add(com.example.medtracker.Message("Nieuwtjes8", "Nog zeer weinig8."))
-        arrayList.add(com.example.medtracker.Message("Nieuwtjes9", "Nog zeer weinig9."))
-    }//This creates a list TODO: make this an API call\
+    }
+
 }
