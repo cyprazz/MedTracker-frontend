@@ -7,8 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.card_view.*
 import kotlinx.android.synthetic.main.fragment_substance.*
 import com.example.medtracker.MessageAdapter as Message_adapter
 
@@ -31,25 +29,19 @@ class Substance : Fragment() {
         createList()
         buildRecyclerView()
 
-//        deleteButton.setOnClickListener{
-//            removeItem
-//        }
-
-
 
         addnewSubstance2.setOnClickListener{
             val intent = Intent(activity, NewSubstance::class.java)
             startActivity(intent)
         } //This is the button to add a new substance
     }
-//    fun removeCard(){
-//
-//    }
+
     fun buildRecyclerView(){
         val messageAdapter = Message_adapter(arrayList, this)
         card_recycler.layoutManager = LinearLayoutManager(context)
         card_recycler.adapter = messageAdapter
     }//This builds the recycler
+
     fun View.toggleVisibility() {
         if (visibility == View.VISIBLE) {
             visibility = View.INVISIBLE
@@ -57,6 +49,7 @@ class Substance : Fragment() {
             visibility = View.VISIBLE
         }
     } //This is an function to toggle visibility of the empty message
+
     fun createList() {
         arrayList.add(com.example.medtracker.Message("Nieuwtjes1", "Nog zeer weinig1."))
         arrayList.add(com.example.medtracker.Message("Nieuwtjes2", "Nog zeer weinig2."))
@@ -67,5 +60,5 @@ class Substance : Fragment() {
         arrayList.add(com.example.medtracker.Message("Nieuwtjes7", "Nog zeer weinig7."))
         arrayList.add(com.example.medtracker.Message("Nieuwtjes8", "Nog zeer weinig8."))
         arrayList.add(com.example.medtracker.Message("Nieuwtjes9", "Nog zeer weinig9."))
-    }//This creates a list TODO: make this an API call
+    }//This creates a list TODO: make this an API call\
 }
