@@ -4,28 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/FragmentBackground">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/toolbar"
         android:layout_width="442dp"
         android:layout_height="53dp"
         android:layout_marginTop="2dp"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/PrimaryBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_naviagtion" />
-
-
+        app:menu="@menu/bottom_navigation"
+        app:itemIconTint="@drawable/nav_bar_color_selector"
+        app:itemTextColor="@drawable/nav_bar_color_selector"/>
 
     <FrameLayout
-    android:id="@id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+        android:id="@id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="53dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
