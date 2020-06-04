@@ -3,39 +3,58 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    <include
-        layout="@layout/calander_week_panel"
-        android:layout_height="123dp"
+    <RelativeLayout
         android:layout_width="170dp"
+        android:layout_height="123dp"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        />
-    <include
-        android:id="@+id/Maandag"
-        layout="@layout/calander_week_panel"
-        android:layout_width="170dp"
-        android:layout_height="123dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="10dp"
-        android:layout_alignParentEnd="true"
-        />
+        android:background="@drawable/button_background">
 
-    <include
-        layout="@layout/calander_week_panel"
-        android:layout_height="123dp"
+        <TextView
+            android:id="@+id/Monday_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Ma" />
+
+        <TextView
+            android:id="@+id/Monday_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="20dp"
+            android:text="6" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="170dp"
+        android:layout_height="123dp"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="195dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="00dp"
-        />
-    <include
-        layout="@layout/calander_week_panel"
-        android:layout_width="170dp"
-        android:layout_height="123dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentEnd="true"
-        />
+        android:background="@drawable/button_background">
+
+        <TextView
+            android:id="@+id/Thuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Ma" />
+
+        <TextView
+            android:id="@+id/Monday_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="20dp"
+            android:text="6" />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
 
