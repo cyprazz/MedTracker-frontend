@@ -40,10 +40,10 @@ class SubstanceAdapter(val drugFeed: DrugFeed): RecyclerView.Adapter<CustomViewH
 class CustomViewHolder(val view: View, var drug: drugdata?= null): RecyclerView.ViewHolder(view){
     //hier stuur je de info via een intent mee naar de add_substance
     companion object{
-        const val Substance_Name_Key = "Substance title"
-        const val Substance_Liter_Key = "Substance liter"
-        const val Substance_Percentage_Key = "Substance Percentage"
-        const val Substance_Image_Key = "Substance Image"
+        const val SubstanceNameKey = "Substance title"
+        const val SubstanceLiterKey = "Substance liter"
+        const val SubstancePercentageKey = "Substance Percentage"
+        const val SubstanceImageKey = "Substance Image"
     }
 
     init {
@@ -51,10 +51,10 @@ class CustomViewHolder(val view: View, var drug: drugdata?= null): RecyclerView.
             val intent = Intent(view.context, AddSubstance::class.java)
 
             //meesturen van gegevens naar de addsubstance pagina
-            intent.putExtra(Substance_Name_Key, drug?.attributes?.name)
-            intent.putExtra(Substance_Liter_Key, drug?.id.toString())
-            intent.putExtra(Substance_Percentage_Key, drug?.type)
-            intent.putExtra(Substance_Image_Key, drug?.attributes?.thumbnailURL)
+            intent.putExtra(SubstanceNameKey, drug?.attributes?.name)
+            intent.putExtra(SubstanceLiterKey, drug?.id.toString())
+            intent.putExtra(SubstancePercentageKey, drug?.type)
+            intent.putExtra(SubstanceImageKey, drug?.attributes?.thumbnailURL)
 
             view.context.startActivity(intent)
         }
