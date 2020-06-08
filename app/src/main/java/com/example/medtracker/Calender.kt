@@ -29,23 +29,3 @@ class Calender : Fragment() {
 
 }
 
-
-
-
-//ButtonDay.setOnClickListener{
-//    ButtonDay.setBackgroundResource(R.drawable.button_background_selected)
-//    ButtonWeek.setBackgroundResource(R.drawable.button_background)
-//    ButtonMonth.setBackgroundResource(R.drawable.button_background)
-//}
-//ButtonWeek.setOnClickListener{
-//    ButtonDay.setBackgroundResource(R.drawable.button_background)
-//    ButtonWeek.setBackgroundResource(R.drawable.button_background_selected)
-//    ButtonMonth.setBackgroundResource(R.drawable.button_background)
-//
-//}
-//
-//ButtonMonth.setOnClickListener{
-//    ButtonDay.setBackgroundResource(R.drawable.button_background)
-//    ButtonWeek.setBackgroundResource(R.drawable.button_background)
-//    ButtonMonth.setBackgroundResource(R.drawable.button_background_selected)
-//}
