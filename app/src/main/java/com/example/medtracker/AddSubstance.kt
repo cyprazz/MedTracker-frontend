@@ -17,10 +17,10 @@ class AddSubstance : AppCompatActivity(){
             setContentView(R.layout.add_substance)
 
             // krijg de title van de adapter met een intent call TODO kan dit cleaner?
-            val Name = intent.getStringExtra(CustomViewHolder.SubstanceNameKey)
-            val Liter = intent.getStringExtra(CustomViewHolder.SubstanceLiterKey)
-            val Percentage = intent.getStringExtra(CustomViewHolder.SubstancePercentageKey)
-            val Image = intent.getStringExtra(CustomViewHolder.SubstanceImageKey)
+            val Name = intent.getStringExtra(CustomViewHolder.Substance_Name_Key)
+            val Liter = intent.getStringExtra(CustomViewHolder.Substance_Liter_Key)
+            val Percentage = intent.getStringExtra(CustomViewHolder.Substance_Percentage_Key)
+            val Image = intent.getStringExtra(CustomViewHolder.Substance_Image_Key)
 
             val name = findViewById<TextView>(R.id.Substance)
             name.text = Name

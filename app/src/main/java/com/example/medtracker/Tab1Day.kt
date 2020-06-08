@@ -14,6 +14,6 @@ class Tab1Day : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater!!.inflate(R.layout.calander_day, container, false)
+        return inflater!!.inflate(R.layout.calender_day, container, false)
     }
 }

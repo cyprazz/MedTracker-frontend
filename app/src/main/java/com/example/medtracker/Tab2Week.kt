@@ -14,6 +14,6 @@ class Tab2Week : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater!!.inflate(R.layout.calander_week, container, false)
+        return inflater!!.inflate(R.layout.calender_week, container, false)
     }
 }
