@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/FragmentBackground">
 
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cardRecycler"
         android:layout_width="match_parent"
@@ -15,8 +13,6 @@
         android:padding="4dp"
         android:background="#80000000"
         android:scrollbars="vertical"/>
-
-
 
     <Button
         android:id="@+id/newSubstanceButton"
@@ -30,17 +26,17 @@
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874" />
+        app:layout_constraintVertical_bias="0.955" />
 
     <TextView
         android:id="@+id/empty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="@string/empty"
         android:textColor="@color/TextColor"
-        app:layout_constraintEnd_toStartOf="@id/cardRecycler"
+        app:layout_constraintBottom_toBottomOf="@+id/cardRecycler"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

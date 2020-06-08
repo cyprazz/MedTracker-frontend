@@ -3,38 +3,198 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    <include
-        layout="@layout/calender_week_panel"
-        android:layout_height="123dp"
-        android:layout_width="170dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        />
-    <include
-        android:id="@+id/Maandag"
-        layout="@layout/calender_week_panel"
-        android:layout_width="170dp"
-        android:layout_height="123dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentEnd="true"
-        />
 
-    <include
-        layout="@layout/calender_week_panel"
-        android:layout_height="123dp"
-        android:layout_width="170dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="00dp"
-        />
-    <include
-        layout="@layout/calender_week_panel"
-        android:layout_width="170dp"
-        android:layout_height="123dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentEnd="true"
-        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background">
+
+                <TextView
+                    android:id="@+id/Monday_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="Ma" />
+
+                <TextView
+                    android:id="@+id/Monday_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="20dp"
+                    android:text="6" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background">
+
+                <TextView
+                    android:id="@+id/Tuesday_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="Tue" />
+
+                <TextView
+                    android:id="@+id/Tuesday_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="20dp"
+                    android:text="7" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background">
+
+                <TextView
+                    android:id="@+id/Wednesday_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="Wed" />
+
+                <TextView
+                    android:id="@+id/Wednesday_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="20dp"
+                    android:text="8" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background">
+
+                <TextView
+                    android:id="@+id/Thurday_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="Thu" />
+
+                <TextView
+                    android:id="@+id/Thursday_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="20dp"
+                    android:text="9" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background">
+
+                <TextView
+                    android:id="@+id/Friday_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="Fri" />
+
+                <TextView
+                    android:id="@+id/Friday_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="20dp"
+                    android:text="10" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background">
+
+                <TextView
+                    android:id="@+id/Saturdaytext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="Sat" />
+
+                <TextView
+                    android:id="@+id/Saturday_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="20dp"
+                    android:text="11" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background">
+
+                <TextView
+                    android:id="@+id/Sundaytext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="Sun" />
+
+                <TextView
+                    android:id="@+id/Sunday_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="20dp"
+                    android:text="12" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 </RelativeLayout>
-
