@@ -1,5 +1,7 @@
 package com.example.medtracker
 
-class HomeFeed (val videos: List<Video>)
+class DrugFeed (val data: List<drugdata>)
 
-class Video (val id: Int, val name: String, val link: String, val imageUrl: String, val numberOfViews: Int)
+class drugdata (val id: Int, val type: String, val attributes: attributes)
+
+class attributes (val name: String, val thumbnailURL:String)
