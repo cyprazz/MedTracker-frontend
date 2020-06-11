@@ -25,5 +25,17 @@
     <string name="title">Title</string>
     <string name="message">This is an empty message</string>
     <string name="readLess">Read less</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="hintUsername">Fill in your username</string>
+    <string name="username">Username</string>
+    <string name="hintEmail">Email</string>
+    <string name="password">Enter your password</string>
+    <string name="birthday">Enter your date of birth</string>
+    <string name="password_strength_weak">Your password is too weak</string>
+    <string name="password_strength_medium">Your password is okay</string>
+    <string name="password_strength_strong">Your password is strong</string>
+    <string name="password_strength_very_strong">Your password is very strong</string>
+    <string name="passwordRules">Your password must be at least 8 characters. With at least 1 number and 1 special character</string>
 
 </resources>
