@@ -30,7 +30,7 @@ class NewSubstance : FragmentActivity() {
         fetchJson()
     }
     fun fetchJson(){
-        val apiUrl = "https://api.letsbuildthatapp.com/youtube/home_feed"
+        val apiUrl = "http://192.168.2.19:8080/drugs"
         val request = Request.Builder().url(apiUrl).build()
         val client = OkHttpClient()
         client.newCall(request).enqueue(object: Callback{
@@ -39,9 +39,9 @@ class NewSubstance : FragmentActivity() {
 
                 val gson = GsonBuilder().create()
 
-                val homeFeed = gson.fromJson(body, HomeFeed::class.java)
+                val drugFeed = gson.fromJson(body, DrugFeed::class.java)
                 runOnUiThread {
-                    Substance_recyclerview.adapter = SubstanceAdapter(homeFeed)
+                    Substance_recyclerview.adapter = SubstanceAdapter(drugFeed)
                 }
             }
             override fun onFailure(call: Call, e: IOException) {

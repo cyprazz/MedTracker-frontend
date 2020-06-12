@@ -28,7 +28,7 @@ class AddSubstance : AppCompatActivity(){
             liter.text = Liter
             val percentage = findViewById<TextView>(R.id.Percentage)
             percentage.text = Percentage
-            val image = findViewById<ImageView>(R.id.Preview_image)
+            val image = findViewById<ImageView>(R.id.PreviewImage)
             Picasso.with(this).load(Image).into(image)
 
             // add button een dialog box geven

@@ -1,103 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/FragmentBackground"
-    android:layout_marginBottom="53dp">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="342dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="370dp"
-        android:text="@string/calender"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    android:background="@color/FragmentBackground">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:background="@drawable/container_panel"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="10dp">
+        android:layout_margin="5dp"
+        android:background="@drawable/container_panel">
+    <TextView
+        android:id="@+id/Genres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hier de genres"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/TextColor"/>
 
+    <View
+        android:id="@+id/devider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/Genres"
+        android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hier de genres"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/TextColor"/>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabLayout"
+        app:tabTextColor="@color/TextColor"
+        app:tabBackground="@drawable/button_background_selector"
+        android:layout_below="@id/devider"
+        app:tabIndicatorHeight="0dp">
+    </com.google.android.material.tabs.TabLayout>
 
-        <View
-            android:id="@+id/dividerTop"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_marginTop="30dp"
-            android:background="@android:color/darker_gray" />
+    <View
+        android:id="@+id/devider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/tabLayout"
+        android:background="@android:color/darker_gray" />
 
-        <Button
-            android:id="@+id/ButtonDay"
-            android:layout_width="70dp"
-            android:layout_height="40dp"
-            android:layout_alignTop="@id/dividerTop"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button_background_selected"
-            android:text="Day"
-            android:textColor="@color/TextColor" />
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPager"
+        android:layout_margin="5dp"
 
-        <Button
-            android:id="@+id/ButtonWeek"
-            android:layout_width="70dp"
-            android:layout_height="40dp"
-            android:layout_alignTop="@id/dividerTop"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button_background"
-            android:text="Week"
-            android:textColor="@color/TextColor" />
+        android:layout_below="@id/tabLayout">
 
-        <Button
-            android:id="@+id/ButtonMonth"
-            android:layout_width="70dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button_background"
-            android:layout_marginEnd="35dp"
-            android:text="Month"
-            android:textColor="@color/TextColor"
-            android:layout_alignTop="@id/dividerTop"
-            android:layout_alignEnd="@id/dividerTop"/>
-        <View
-            android:id="@+id/dividerBottom"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_marginTop="50dp"
-            android:layout_alignTop="@id/ButtonDay"
-            android:background="@android:color/darker_gray" />
-
-        <include
-            android:id="@+id/buttonChange"
-            layout="@layout/calender_day"
-            android:layout_width="match_parent"
-            android:layout_alignTop="@id/dividerBottom"
-            android:layout_margin="7dp"
-            android:layout_height="wrap_content" />
-
-
+    </androidx.viewpager.widget.ViewPager>
     </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+</RelativeLayout>

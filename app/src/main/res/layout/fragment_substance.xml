@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/FragmentBackground">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cardRecycler"
         android:layout_width="match_parent"
@@ -17,14 +16,15 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
+
     <Button
         style="@style/button"
         android:id="@+id/newSubstanceButton"
         android:layout_marginBottom="32dp"
         android:text="@string/addNewSubstance"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
     <TextView
         android:id="@+id/empty"
@@ -33,7 +33,6 @@
         android:text="@string/empty"
         android:textColor="@color/TextColor"
         app:layout_constraintBottom_toBottomOf="@+id/cardRecycler"
-        app:layout_constraintEnd_toEndOf="@+id/cardRecycler"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardRecycler" />
 
