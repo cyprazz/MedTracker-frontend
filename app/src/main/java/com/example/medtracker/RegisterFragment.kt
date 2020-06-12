@@ -1,6 +1,7 @@
 package com.example.medtracker
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.text.Editable
@@ -11,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
 import com.github.kittinunf.fuel.Fuel
@@ -219,7 +221,9 @@ class RegisterFragment : Fragment() {
             .also { println(it) }
             .response { result ->
                 when (result) {
-                    is Result.Success -> println("Success") //TODO login
+                    is Result.Success -> {
+                        loginPost(email, password)
+                    }
                     is Result.Failure -> showError(emailLay, "Your email was already found in our database")
                 }
             }
@@ -233,6 +237,51 @@ class RegisterFragment : Fragment() {
         val digest = MessageDigest.getInstance(algorithm)
         val bytes = digest.digest(this.toByteArray(Charsets.UTF_8))
         return bytes.fold("", { str, it -> str + "%02x".format(it) })
+    }
+
+    private fun loginPost(email: String, password: String) {
+        val registerFormBody = "{\"email\":\"$email\",\"password\":\"$password\"}"
+
+        Thread(Runnable {
+            val (_, _, result) = Fuel.post("http://192.168.1.4:8080/login") //TODO make this request to server
+                .jsonBody(registerFormBody)
+                .also { println(it) }
+                .responseString()
+
+            when (result) {
+                is Result.Success -> {
+                    activity?.runOnUiThread {
+                        if(result.value.toInt() != 0) { //TODO: when backend changes this to a string this check needs to change
+                            saveToken(result.value) //save the token to sharedpreferences
+                            startMain() //start the main activity
+                        } else {
+                            activity?.runOnUiThread {
+                                Toast.makeText(context,"Your Token failed.", Toast.LENGTH_LONG).show()
+                            }
+                        }
+                    }
+                }
+                is Result.Failure -> {
+                    activity?.runOnUiThread {
+                        Toast.makeText(context,"Something went wrong: $result", Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
+        }).start()
+    }
+
+    private fun saveToken(token: String) { // function for saving the API token in the shared preferences
+        val sharedPreferences = this.activity?.getSharedPreferences("Token", 0)
+        val editor = sharedPreferences?.edit()
+        editor?.putString("Token", token)
+        editor?.apply()
+    }
+
+
+    private fun startMain() { // function to start the main activity
+        val intent = Intent(this.activity, MainActivity::class.java).apply {
+        }
+        startActivity(intent)
     }
 
 }
