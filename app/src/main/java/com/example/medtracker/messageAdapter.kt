@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.card_view.view.*
 
@@ -11,7 +12,7 @@ open class MessageAdapter(val arrayList: ArrayList<Message>, val context: Substa
     RecyclerView.Adapter<MessageAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val button: Button? = itemView.closeBtn //Init the button, later used in onBind
+        val button: ImageView? = itemView.closeBtn //Init the button, later used in onBind
         fun bindItems(message: Message) { //This function is used in onBindViewHolder, it binds the title and message from the array to the cards
             itemView.ctitle.text = message.title
             itemView.cmessage.text = message.message

@@ -20,7 +20,7 @@
     <string name="blikBier">Blik - 33cl</string>
     <string name="alcoholPercentage">Alcohol percentage 5%</string>
     <string name="substanceName">Substance name</string>
-    <string name="empty">It is pretty empty in here...</string>
+    <string name="empty">It is pretty empty in here…</string>
     <string name="readMore">Read more</string>
     <string name="title">Title</string>
     <string name="message">This is an empty message</string>
@@ -32,10 +32,10 @@
     <string name="hintEmail">Email</string>
     <string name="password">Enter your password</string>
     <string name="birthday">Enter your date of birth</string>
-    <string name="password_strength_weak">Your password is too weak</string>
-    <string name="password_strength_medium">Your password is okay</string>
-    <string name="password_strength_strong">Your password is strong</string>
-    <string name="password_strength_very_strong">Your password is very strong</string>
+    <string name="password_strength_weak">Weak</string>
+    <string name="password_strength_medium">Medium</string>
+    <string name="password_strength_strong">Strong</string>
+    <string name="password_strength_very_strong">Very strong</string>
     <string name="passwordRules">Your password must be at least 8 characters. With at least 1 number and 1 special character</string>
 
 </resources>
