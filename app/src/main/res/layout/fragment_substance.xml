@@ -10,34 +10,30 @@
         android:id="@+id/cardRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="4dp"
         android:background="#80000000"
-        android:scrollbars="vertical"/>
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
 
     <Button
+        style="@style/button"
         android:id="@+id/newSubstanceButton"
-        android:layout_width="382dp"
-        android:layout_height="62dp"
-        android:background="@color/colorPrimary"
+        android:layout_marginBottom="32dp"
         android:text="@string/addNewSubstance"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <TextView
         android:id="@+id/empty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="@string/empty"
         android:textColor="@color/TextColor"
         app:layout_constraintBottom_toBottomOf="@+id/cardRecycler"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/cardRecycler" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

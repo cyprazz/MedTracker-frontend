@@ -1,5 +1,6 @@
 package com.example.medtracker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +11,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val sharedPreferences = getSharedPreferences("Token", 0)
+        val APIToken = sharedPreferences.getString("Token", null)
+
+        if (APIToken == null) { //for checking the existence of the APItoken, if there is none, start LogActivity
+            val intent = Intent(this, LogActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
         setContentView(R.layout.activity_main)
         loadFragment(Substance())
         toolbar.checkItem(R.id.navSubstances)

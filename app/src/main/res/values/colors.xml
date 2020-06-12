@@ -9,5 +9,5 @@
     <color name="TextColor">#FFFFFF</color>
     <color name="TextColorFade">#66FFFFFF</color>
     <color name="colorPrimaryFade">#886200EE</color>
-
+    <color name="white">#FFFFFF</color>
 </resources>

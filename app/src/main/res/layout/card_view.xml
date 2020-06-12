@@ -20,26 +20,24 @@
         android:layout_marginEnd="60dp">
 
 
-    
-    <TextView
-        android:id="@+id/ctitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        android:text="@string/title"
-        android:textSize="20sp"
-        android:layout_alignParentTop="true"
-        android:textColor="@color/TextColor"></TextView>
+        <TextView
+            android:id="@+id/ctitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="@string/title"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/TextColor" />
 
-    <TextView
-        android:id="@+id/cmessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/message"
-        android:textColor="@color/TextColor"
-        android:textSize="15sp"
-        android:layout_below="@id/ctitle"
-        ></TextView>
+        <TextView
+            android:id="@+id/cmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message"
+            android:textColor="@color/TextColor"
+            android:textSize="15sp"
+            android:layout_below="@id/ctitle" />
 
 
 
@@ -48,14 +46,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <ImageView
             android:id="@+id/closeBtn"
+            android:clickable="true"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/white_cross"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></Button>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
