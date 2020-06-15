@@ -9,10 +9,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val sharedPreferences = getSharedPreferences("Token", 0)
         val APIToken = sharedPreferences.getString("Token", null)
+
 
         if (APIToken == null) { //for checking the existence of the APItoken, if there is none, start LogActivity
             val intent = Intent(this, LogActivity::class.java).apply {
@@ -28,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.navCalender-> {
                     title=resources.getString(R.string.calender)
-                    loadFragment(Calender())
+                    loadFragment(CalenderFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navSubstances-> {

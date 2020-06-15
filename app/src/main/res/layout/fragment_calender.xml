@@ -27,17 +27,18 @@
         android:layout_below="@id/Genres"
         android:background="@android:color/darker_gray" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tabLayout"
-        app:tabTextColor="@color/TextColor"
-        app:tabBackground="@drawable/button_background_selector"
-        android:layout_below="@id/devider"
-        app:tabIndicatorHeight="0dp">
-    </com.google.android.material.tabs.TabLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/devider"
+            android:layout_marginTop="0dp"
+            app:tabBackground="@drawable/button_background_selector"
+            app:tabIndicatorHeight="0dp"
+            app:tabTextColor="@color/TextColor">
+        </com.google.android.material.tabs.TabLayout>
 
-    <View
+        <View
         android:id="@+id/devider2"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"

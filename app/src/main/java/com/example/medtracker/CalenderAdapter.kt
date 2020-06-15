@@ -19,6 +19,11 @@ class CalenderAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         }
     }
 
+    fun getAgendaEntries(){
+
+    }
+
+
     override fun getCount(): Int {
         return 3
     }
