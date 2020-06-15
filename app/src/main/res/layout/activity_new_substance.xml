@@ -8,11 +8,8 @@
     tools:context=".NewSubstance"
     android:background="@color/FragmentBackground">
 
-<RelativeLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:background="@drawable/container_panel"
-    android:layout_margin="5dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    style="@style/background">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -21,28 +18,30 @@
         android:layout_gravity="bottom|right"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         app:backgroundTint="@color/colorPrimary"
         app:fabSize="mini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow_back" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Substance_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="170dp" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"/>
 
     <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_marginTop="160dp"
-        android:background="@android:color/darker_gray" />
+        style="@style/line"
+        android:id="@+id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchLay"/>
     <include
+        android:id="@+id/searchLay"
         layout="@layout/substance_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

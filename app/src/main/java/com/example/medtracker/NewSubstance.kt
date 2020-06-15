@@ -30,7 +30,7 @@ class NewSubstance : FragmentActivity() {
         fetchJson()
     }
     fun fetchJson(){
-        val apiUrl = "http://192.168.2.19:8080/drugs"
+        val apiUrl = "http://192.168.43.193:8080/drugs" //TODO make this request to the server
         val request = Request.Builder().url(apiUrl).build()
         val client = OkHttpClient()
         client.newCall(request).enqueue(object: Callback{

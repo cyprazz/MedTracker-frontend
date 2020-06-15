@@ -106,26 +106,25 @@ class LoginFragment : Fragment() {
 
         //setting up the request
         Thread(Runnable {
-            val (_, _, result) = Fuel.post("http://192.168.1.4:8080/login") //TODO make this request to server
+            val (_, _, result) = Fuel.post("http://192.168.43.193:8080/login") //TODO make this request to server
                 .jsonBody(registerFormBody)
                 .also { println(it) }
                 .responseString()
 
             when (result) {
                 is Result.Success -> {
-                    activity?.runOnUiThread {
                         if(result.value.toInt() != 0) { //TODO: when backend changes this to a string this check needs to change
-                            saveToken(result.value) //save the token to sharedpreferences
-                            startMain() //start the main activity
+                            activity?.runOnUiThread {
+                                saveToken(result.value) //save the token to sharedpreferences
+                                startMain() //start the main activity
+                            }
                         } else {
                             activity?.runOnUiThread {
                                 Toast.makeText(context,"Your email or password is incorrect", Toast.LENGTH_LONG).show()
                             }
                         }
                     }
-                }
                 is Result.Failure -> {
-                    println(result)
                     activity?.runOnUiThread {
                         Toast.makeText(context,"Your email or password is incorrect", Toast.LENGTH_LONG).show()
                     }
