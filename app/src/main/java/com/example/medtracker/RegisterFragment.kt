@@ -216,7 +216,7 @@ class RegisterFragment : Fragment() {
         val registerFormBody = "{\"username\":\"$username\",\"email\":\"$email\", \"password\":\"$password\",\"verfied\":false,\"birthdate\":\"$dateOfBirth\"}"
 
         //setting up the request
-        Fuel.post("http://192.168.43.193:8080/user") //TODO make this request to server
+        Fuel.post("http://192.168.2.1:8080/user") //TODO make this request to server
             .jsonBody(registerFormBody)
             .also { println(it) }
             .response { result ->

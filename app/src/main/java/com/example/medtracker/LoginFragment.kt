@@ -106,7 +106,7 @@ class LoginFragment : Fragment() {
 
         //setting up the request
         Thread(Runnable {
-            val (_, _, result) = Fuel.post("http://192.168.43.193:8080/login") //TODO make this request to server
+            val (_, _, result) = Fuel.post("http:///192.168.2.1:8080/login") //TODO make this request to server
                 .jsonBody(registerFormBody)
                 .also { println(it) }
                 .responseString()
