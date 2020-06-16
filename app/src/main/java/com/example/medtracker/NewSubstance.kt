@@ -14,31 +14,31 @@ import java.io.IOException
 
 class NewSubstance : FragmentActivity() {
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_substance)
 
+        val sharedPreferences = getSharedPreferences("Token", 0)
+        val apiToken = sharedPreferences.getString("Token", null)
+
         Substance_recyclerview.layoutManager = LinearLayoutManager(this)
 
         floatingActionButton.setOnClickListener{
-        val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
 
         }
 
-        fetchJson()
+        fetchJson(apiToken)
     }
-    fun fetchJson(){
-        val apiUrl = "http://192.168.2.19:8080/drugs"
+    fun fetchJson(t : String?){
+        val apiUrl = "http://192.168.43.193:8080/creators/$t/drugs?withVerified=false"
         val request = Request.Builder().url(apiUrl).build()
         val client = OkHttpClient()
         client.newCall(request).enqueue(object: Callback{
             override fun onResponse(call: Call, response: Response) {
                 val body = response.body?.string()
-
                 val gson = GsonBuilder().create()
-
                 val drugFeed = gson.fromJson(body, DrugFeed::class.java)
                 runOnUiThread {
                     Substance_recyclerview.adapter = SubstanceAdapter(drugFeed)
