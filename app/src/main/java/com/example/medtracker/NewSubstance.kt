@@ -2,9 +2,16 @@ package com.example.medtracker
 
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.TypedValue
+import android.view.ViewGroup
+import android.widget.RelativeLayout
+import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.GsonBuilder
@@ -39,13 +46,34 @@ class NewSubstance : FragmentActivity() {
             override fun onResponse(call: Call, response: Response) {
                 val body = response.body?.string()
                 val gson = GsonBuilder().create()
+
                 val drugFeed = gson.fromJson(body, DrugFeed::class.java)
-                runOnUiThread {
-                    Substance_recyclerview.adapter = SubstanceAdapter(drugFeed)
+
+                if (drugFeed != null) {
+                    runOnUiThread {
+                        Substance_recyclerview.adapter = SubstanceAdapter(drugFeed)
+                    }
+                } else {
+                    runOnUiThread(Runnable() {
+                        val error = findViewById<TextView>(R.id.ErrorTextView)
+                        error.text = "Error! Could not load data"
+                        error.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25f)
+                        error.setTextColor(Color.WHITE)
+
+                    })
                 }
             }
+
             override fun onFailure(call: Call, e: IOException) {
                 println("failed to execute")
+                runOnUiThread(Runnable() {
+                    val error = findViewById<TextView>(R.id.ErrorTextView)
+                    error.text = "Error! Could not load data"
+                    error.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25f)
+                    error.setTextColor(Color.WHITE)
+
+                })
+
             }
         })
     }
