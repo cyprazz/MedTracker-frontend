@@ -30,13 +30,13 @@ class NewSubstance : FragmentActivity() {
         fetchJson()
     }
     fun fetchJson(){
-        val apiUrl = "http://192.168.2.19:8080/drugs"
+        val apiUrl = "http://192.168.2.19:8080/creators/1/drugs"
         val request = Request.Builder().url(apiUrl).build()
         val client = OkHttpClient()
         client.newCall(request).enqueue(object: Callback{
             override fun onResponse(call: Call, response: Response) {
                 val body = response.body?.string()
-
+                println(body)
                 val gson = GsonBuilder().create()
 
                 val drugFeed = gson.fromJson(body, DrugFeed::class.java)
